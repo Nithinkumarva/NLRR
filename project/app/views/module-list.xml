@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+  <ActionBar title="NLRR - Next Level Reborn Revised" />
+  
+  <ScrollView>
+    <StackLayout class="p-4">
+      <Label text="Start Your Coding Journey" class="text-2xl font-bold mb-4 text-center text-blue-800" />
+      <ListView items="{{ modules }}" itemTap="{{ onModuleTap }}" height="100%" separatorColor="transparent">
+        <ListView.itemTemplate>
+          <GridLayout columns="*, auto" class="module-card">
+            <StackLayout col="0">
+              <Label text="{{ name }}" class="module-title text-xl" />
+              <Label text="{{ description }}" textWrap="true" class="module-description" />
+              <StackLayout orientation="horizontal" class="stars-container">
+                <Label text="★" class="text-yellow-400 text-lg" repeat="{{ stars }}" />
+                <Label text="☆" class="text-gray-300 text-lg" repeat="{{ maxStars - stars }}" />
+              </StackLayout>
+              <GridLayout columns="auto, *" class="mt-2">
+                <Label col="0" text="{{ lessons.length + ' Lessons' }}" class="text-sm text-blue-500" />
+                <Label col="1" text="{{ completed ? 'Completed' : 'In Progress' }}" 
+                       class="{{ completed ? 'text-green-500' : 'text-orange-400' }} text-sm text-right" />
+              </GridLayout>
+            </StackLayout>
+          </GridLayout>
+        </ListView.itemTemplate>
+      </ListView>
+    </StackLayout>
+  </ScrollView>
+</Page>

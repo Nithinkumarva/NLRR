@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+Page {
+  background-color: #f5f5f5;
+}
+
+.module-card {
+  background-color: white;
+  border-radius: 12;
+  margin: 8 16;
+  padding: 16;
+  elevation: 4;
+}
+
+ActionBar {
+  background-color: #2563eb;
+  color: white;
+  font-size: 18;
+  font-weight: bold;
+}
+
+.stars-container {
+  margin-top: 8;
+  margin-bottom: 4;
+}
+
+.module-title {
+  color: #1e40af;
+  font-weight: bold;
+  margin-bottom: 4;
+}
+
+.module-description {
+  color: #4b5563;
+  font-size: 14;
+  margin-bottom: 8;
+}
